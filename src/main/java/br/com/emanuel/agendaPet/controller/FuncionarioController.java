@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 @RequestMapping("/funcionarios")
 @RequiredArgsConstructor
+@CrossOrigin(origins = "*") // Para não ter problemas com o Front-end depois
 public class FuncionarioController {
 
     private final FuncionarioService service;
@@ -28,11 +29,7 @@ public class FuncionarioController {
 
     @PutMapping("/{id}")
     public ResponseEntity<Funcionario> atualizar(@PathVariable Long id, @RequestBody Funcionario funcionario) {
-        try {
-            return ResponseEntity.ok(service.atualizarPorId(id, funcionario));
-        } catch (RuntimeException e) {
-            return ResponseEntity.notFound().build();
-        }
+        return ResponseEntity.ok(service.atualizar(id, funcionario));
     }
 
     @DeleteMapping("/{id}")
@@ -40,4 +37,5 @@ public class FuncionarioController {
         service.deletarPorId(id);
         return ResponseEntity.noContent().build();
     }
+
 }

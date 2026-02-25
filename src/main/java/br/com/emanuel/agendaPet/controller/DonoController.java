@@ -18,7 +18,6 @@ public class DonoController {
 
     @PostMapping
     public ResponseEntity<Dono> cadastrar(@RequestBody Dono dono) {
-        // O Service vai cuidar de salvar o Dono e o Pet (Cascade)
         return ResponseEntity.status(HttpStatus.CREATED).body(service.cadastrar(dono));
     }
 

@@ -19,6 +19,7 @@ public class AgendamentoController {
         return ResponseEntity.status(HttpStatus.CREATED).body(service.agendar(agendamento));
     }
 
+
     @GetMapping("/{id}")
     public ResponseEntity<Agendamento> buscar(@PathVariable Long id) {
         return service.consultarPorId(id)

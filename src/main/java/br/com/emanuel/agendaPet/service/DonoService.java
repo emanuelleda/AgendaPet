@@ -2,6 +2,7 @@ package br.com.emanuel.agendaPet.service;
 
 import br.com.emanuel.agendaPet.model.entity.Dono;
 
+import br.com.emanuel.agendaPet.repository.DonoRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -12,7 +13,7 @@ import java.util.Optional;
 @RequiredArgsConstructor
 public class DonoService {
 
-    private final br.com.emanuel.agendaPet.repostory.DonoRepository repository;
+    private final DonoRepository repository;
 
 
     @Transactional

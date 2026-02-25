@@ -1,7 +1,7 @@
 package br.com.emanuel.agendaPet.service;
 
 import br.com.emanuel.agendaPet.model.entity.Agendamento;
-import br.com.emanuel.agendaPet.repostory.AgendamentoRepository;
+import br.com.emanuel.agendaPet.repository.AgendamentoRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 

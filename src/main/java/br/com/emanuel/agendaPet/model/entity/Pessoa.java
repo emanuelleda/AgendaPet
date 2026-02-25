@@ -7,8 +7,11 @@ import br.com.emanuel.agendaPet.model.vo.Telefone;
 import jakarta.persistence.*;
 import jakarta.validation.Valid;
 import lombok.Getter;
+import lombok.Setter;
 
 @MappedSuperclass
+@Setter
+@Getter
 public abstract class Pessoa {
     @Getter
     @Id

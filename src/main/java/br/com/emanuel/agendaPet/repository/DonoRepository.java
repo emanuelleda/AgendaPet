@@ -1,4 +1,4 @@
-package br.com.emanuel.agendaPet.repostory;
+package br.com.emanuel.agendaPet.repository;
 
 import br.com.emanuel.agendaPet.model.entity.Dono;
 import org.springframework.data.jpa.repository.JpaRepository;

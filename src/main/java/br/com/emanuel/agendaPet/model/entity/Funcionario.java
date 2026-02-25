@@ -6,9 +6,7 @@ import br.com.emanuel.agendaPet.model.vo.Email;
 import br.com.emanuel.agendaPet.model.vo.Nome;
 import br.com.emanuel.agendaPet.model.vo.Telefone;
 import jakarta.persistence.*;
-import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -22,8 +20,6 @@ public class Funcionario extends Pessoa{
 
     @Setter
     @NotNull
-    @NotBlank
-    @Size(min = 5,max = 30)
     @Enumerated(EnumType.STRING)
     private Especialidades especialidade;
 
